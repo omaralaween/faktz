@@ -1,0 +1,142 @@
+/* Main section */
+.faktz-in-action-section {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+/* Main container */
+.faktz-in-action-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 68px;
+  padding: 128px 32px;
+  max-width: 1536px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header section */
+.faktz-in-action-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Heading container */
+.faktz-in-action-heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Heading text */
+.faktz-in-action-heading-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #222222;
+  text-align: center;
+}
+
+.faktz-in-action-heading-p {
+  font-size: 48px;
+  line-height: 48px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faktz-in-action-heading-p {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+/* Faktz brand span */
+.faktz-in-action-brand {
+  color: #5b1f98;
+  font-weight: 800;
+}
+
+/* Green divider line */
+.faktz-in-action-divider {
+  background-color: #34dfa3;
+  height: 4px;
+  width: 96px;
+  border-radius: 2px;
+}
+
+/* Description text */
+.faktz-in-action-description-container {
+  display: flex;
+  justify-content: center;
+  max-width: 672px;
+  width: 100%;
+}
+
+.faktz-in-action-description-text {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #333333;
+  text-align: center;
+}
+
+.faktz-in-action-description-p {
+  margin: 0;
+}
+
+/* Posts container (placeholder until PostCard) */
+.faktz-in-action-posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+  max-width: 896px;
+}
+
+/* View More button container */
+.faktz-in-action-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 16px;
+}
+
+/* View More button */
+.faktz-in-action-button {
+  background-color: #5b1f98;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 32px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(91, 31, 152, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faktz-in-action-button:hover {
+  background-color: #34dfa3;
+  box-shadow: 0 4px 15px rgba(52, 223, 163, 0.35);
+}
+
+/* Button text */
+.faktz-in-action-button-text-wrapper {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 24px;
+  text-align: center;
+}
+
+.faktz-in-action-button-text {
+  margin: 0;
+}

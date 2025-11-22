@@ -1,0 +1,114 @@
+/* Auth Page - Background and Surrounding Elements Only */
+
+/* Main container */
+.auth-page-container {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #fafaff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 16px;
+}
+
+.auth-page-content {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Back to Home Button */
+.auth-back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666666;
+  transition: color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-bottom: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.auth-back-button:hover {
+  color: #5b1f98;
+}
+
+.auth-back-button-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.auth-back-button:hover .auth-back-button-icon {
+  transform: translateX(-4px);
+}
+
+/* Logo Section */
+.auth-logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 56px;
+}
+
+.auth-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.auth-logo-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-logo-svg {
+  width: 48px;
+  height: 48px;
+}
+
+.auth-logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  color: #5b1f98;
+}
+
+.auth-logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  margin: 0;
+}
+
+/* Footer Text */
+.auth-footer-text {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #666666;
+  margin-top: 32px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .auth-page-container {
+    padding: 32px 16px;
+  }
+
+  .auth-logo-section {
+    margin-bottom: 40px;
+  }
+
+  .auth-logo-text {
+    font-size: 28px;
+  }
+}

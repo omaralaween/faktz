@@ -1,0 +1,258 @@
+/* ===== Bar background & containment (wrapper outside your pasted rules) ===== */
+.top-navbar {
+    background: #ffffff;
+    width: 100%;
+    height: 72px;
+    box-shadow: 0 1px 12px rgba(17, 17, 17, 0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Main navbar content container */
+.top-navbar-content {
+    box-sizing: border-box;
+    align-content: stretch;
+    display: flex;
+    gap: 32px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-left: 32px;
+    padding-right: 32px;
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 1456px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Logo wrapper */
+.navbar-logo-wrapper {
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+    display: inline-grid;
+    line-height: 0;
+    place-items: start;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.navbar-logo-wrapper:hover {
+    opacity: 0.8;
+}
+
+/* SVG container */
+.navbar-svg-container {
+    grid-area: 1 / 1;
+    height: 50.004px;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    width: 45.217px;
+}
+
+/* SVG element */
+.navbar-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    aspect-ratio: auto;
+}
+
+/* Heading container */
+.navbar-heading-container {
+    grid-area: 1 / 1;
+    box-sizing: border-box;
+    align-content: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 53.217px;
+    margin-top: 9.002px;
+    position: relative;
+}
+
+/* Heading text wrapper */
+.navbar-heading-text {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 0;
+    position: relative;
+    flex-shrink: 0;
+    font-size: 24px;
+    white-space: nowrap;
+    color: #5b1f98;
+    /* or var(--purple) */
+}
+
+/* Heading paragraph */
+.navbar-heading-p {
+    line-height: 32px;
+    white-space: pre;
+    margin: 0;
+}
+
+/* Navigation container */
+.navbar-nav {
+    align-content: stretch;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Individual nav links (kept minimal to match screenshot) */
+.navbar-link {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: #5b1f98;
+}
+
+/* Join Faktz button */
+.navbar-button {
+    background-color: #5b1f98;
+    /* or var(--purple) */
+    box-sizing: border-box;
+    align-content: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    position: relative;
+    border-radius: 9999px;
+    box-shadow: 0px 4px 15px 0px rgba(91, 31, 152, 0.25);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.navbar-button:hover {
+    background-color: #34dfa3;
+    /* or var(--teal) */
+    box-shadow: 0px 4px 15px 0px rgba(52, 223, 163, 0.35);
+}
+
+/* Button text wrapper */
+.navbar-button-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 0;
+    font-style: normal;
+    position: relative;
+    flex-shrink: 0;
+    font-size: 16px;
+    white-space: nowrap;
+    color: #ffffff;
+}
+
+/* Button text paragraph */
+.navbar-button-text {
+    line-height: 24px;
+    white-space: pre;
+    margin: 0;
+}
+
+/* ===== Responsiveness (kept light, no layout jumps) ===== */
+@media (max-width: 1024px) {
+    .top-navbar {
+        height: 68px;
+    }
+
+    .top-navbar-content {
+        gap: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .navbar-heading-text {
+        font-size: 22px;
+    }
+
+    .navbar-heading-p {
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-heading-container {
+        margin-left: 44px;
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .navbar-link {
+        font-size: 15px;
+    }
+
+    .navbar-svg-container {
+        height: 44px;
+        width: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .top-navbar {
+        height: 64px;
+    }
+
+    .top-navbar-content {
+        gap: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navbar-nav {
+        display: none;
+    }
+
+    /* Hide links on very small screens (no hamburger by design) */
+    .navbar-heading-text {
+        font-size: 20px;
+    }
+
+    .navbar-heading-p {
+        line-height: 28px;
+    }
+
+    .navbar-button {
+        padding: 10px 18px;
+    }
+
+    .navbar-button-text-wrapper {
+        font-size: 15px;
+    }
+}

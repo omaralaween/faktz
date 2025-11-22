@@ -1,0 +1,118 @@
+/* ===========================================
+   PROFILE HEADER CARD — EXACT MATCH
+   =========================================== */
+
+.ph-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+/* Left side layout */
+.ph-left {
+  display: flex;
+  gap: 20px;
+}
+
+/* Avatar */
+.ph-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5b1f98, #34dfa3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.ph-name-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ph-name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.ph-badge {
+  background: #e6d4ff;
+  color: #5b1f98;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.ph-bio {
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  color: #475569;
+  margin: 8px 0 18px;
+  max-width: 540px;
+  line-height: 1.4;
+}
+
+/* Stats row */
+.ph-stats {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.ph-stat-box {
+  text-align: center;
+}
+
+.ph-stat-value {
+  display: block;
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.ph-stat-label {
+  font-size: 12px;
+  color: #6b7280;
+  font-family: "Inter", sans-serif;
+  margin-top: 2px;
+}
+
+/* Divider */
+.ph-divider {
+  width: 1px;
+  height: 26px;
+  background: #e5e7eb;
+}
+
+/* Edit Profile Button */
+.ph-edit-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5b1f98;
+  background: #ffffff;
+  border: 1px solid #c3aadf;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ph-edit-btn:hover {
+  background: #f6eeff;
+}

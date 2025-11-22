@@ -1,0 +1,195 @@
+/* Main section with gradient background */
+.hero-section {
+  background: linear-gradient(to bottom, #ffffff, #f6f7fb);
+  box-sizing: border-box;
+  align-content: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: clip;
+  padding-bottom: 160px;
+  padding-top: 240px;
+  width: 100%;
+}
+
+/* Container with max-width */
+.hero-container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+/* Inner flex container */
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content wrapper with gap and padding */
+.hero-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  width: 100%;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+/* Heading container */
+.hero-heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Heading text */
+.hero-heading-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 0;
+  color: #222222;
+  text-align: center;
+  letter-spacing: -3.6px;
+  width: 100%;
+}
+
+/* Heading paragraph */
+.hero-heading-p {
+  line-height: 72px;
+  font-size: 72px;
+  margin: 0;
+}
+
+/* Purple text span */
+.hero-heading-purple {
+  color: #5b1f98;
+}
+
+/* Black text span */
+.hero-heading-black {
+  color: #222222;
+}
+
+/* Responsive heading for mobile */
+@media (max-width: 768px) {
+  .hero-heading-p {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -2px;
+  }
+}
+
+/* Description container */
+.hero-description-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+/* Description text */
+.hero-description-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  justify-content: center;
+  line-height: 28px;
+  color: #333333;
+  font-size: 20px;
+  text-align: center;
+  white-space: pre;
+}
+
+/* Desktop description paragraphs */
+.hero-description-p-desktop {
+  margin-bottom: 0;
+}
+
+/* Mobile description first paragraph */
+.hero-description-p-mobile-first {
+  display: none;
+}
+
+/* Mobile description second paragraph */
+.hero-description-p-mobile-second {
+  display: none;
+}
+
+/* Responsive description for mobile */
+@media (max-width: 768px) {
+  .hero-description-text {
+    white-space: normal;
+    font-size: 18px;
+  }
+
+  .hero-description-p-desktop {
+    display: none;
+  }
+
+  .hero-description-p-mobile-first {
+    display: block;
+    margin-bottom: auto;
+  }
+
+  .hero-description-p-mobile-second {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+
+/* Button container */
+.hero-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  width: 100%;
+}
+
+/* Start Verifying button */
+.hero-button {
+  background-color: #5b1f98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  box-shadow: 0px 4px 15px 0px rgba(91, 31, 152, 0.25);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.hero-button:hover {
+  background-color: #34dfa3;
+  box-shadow: 0px 4px 15px 0px rgba(52, 223, 163, 0.35);
+}
+
+/* Button text wrapper */
+.hero-button-text-wrapper {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Button text paragraph */
+.hero-button-text {
+  line-height: 28px;
+  margin: 0;
+}

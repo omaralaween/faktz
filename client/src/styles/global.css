@@ -1,0 +1,30 @@
+/* ===============================
+   FACTZ DESIGN SYSTEM
+================================ */
+
+:root {
+  --purple: #5B1F98;
+  --teal: #34DFA3;
+  --dark-gray: #111111;
+  --light-gray: #F8F8FB;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+/* Prevent layout from being wider than viewport */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { width: 100%; overflow-x: hidden; }
+
+/* Helpful defaults */
+img { max-width: 100%; height: auto; display: block; }
+ul { margin: 0; padding: 0; }
+

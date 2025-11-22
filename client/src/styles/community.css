@@ -1,0 +1,278 @@
+/* ===================================
+   COMMUNITY PAGE – LAYOUT
+   (Sidebar & Header are styled elsewhere)
+   =================================== */
+
+.community-content-area {
+  flex: 1;
+  padding: 32px 40px 40px;
+  background-color: #fafaff;
+  min-height: calc(100vh - 72px); /* header height */
+  box-sizing: border-box;
+
+  /* ⬇️ key part: offset for the fixed sidebar */
+  margin-left: 260px;              /* same as .sidebar width */
+  width: calc(100vw - 260px);
+}
+
+/* Tablet & mobile */
+@media (max-width: 1024px) {
+  .community-content-area {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.community-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Custom scrollbar */
+.community-content-area::-webkit-scrollbar {
+  width: 8px;
+}
+.community-content-area::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+.community-content-area::-webkit-scrollbar-thumb {
+  background: #d0d0d0;
+  border-radius: 4px;
+}
+.community-content-area::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0;
+}
+
+/* ===================================
+   PAGE HEADER
+   =================================== */
+
+.community-header-section {
+  margin-bottom: 24px;
+}
+
+.community-header-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #111111;
+  margin: 0 0 4px;
+  letter-spacing: -0.2px;
+}
+
+.community-header-subtitle {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666666;
+  margin: 0;
+}
+
+/* ===================================
+   TABS
+   =================================== */
+
+.community-tabs-section {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e5e5; /* acts like old .community-tabs wrapper */
+}
+
+.community-tab-button {
+  position: relative;
+  padding: 10px 0;
+  margin-right: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #777777;
+}
+
+.community-tab-button:last-child {
+  margin-right: 0;
+}
+
+.community-tab-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5b1f98, #34dfa3);
+  transition: width 0.25s ease;
+}
+
+.community-tab-button.active {
+  color: #111111;
+}
+
+.community-tab-button.active::after {
+  width: 100%;
+}
+
+/* ===================================
+   SECTION HEADERS (Trending / Posts)
+   =================================== */
+
+.community-section {
+  margin-bottom: 32px;
+}
+
+.community-section-header {
+  margin-bottom: 16px;
+}
+
+.community-section-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #222222;
+  margin: 0 0 4px;
+  letter-spacing: -0.2px;
+}
+
+/* renamed to match JSX: <span className="community-section-accent" /> */
+.community-section-accent {
+  width: 80px;
+  height: 3px;
+  border-radius: 999px;
+  background-color: #34dfa3;
+}
+
+/* ===================================
+   TRENDING DISCUSSIONS SLIDER
+   =================================== */
+
+.community-trending-slider {
+  display: flex;
+  gap: 24px;
+  padding: 8px 4px 4px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.community-trending-slider::-webkit-scrollbar {
+  height: 6px;
+}
+.community-trending-slider::-webkit-scrollbar-track {
+  background: #f0f0f5;
+}
+.community-trending-slider::-webkit-scrollbar-thumb {
+  background: #d0d0dd;
+  border-radius: 999px;
+}
+
+/* Wrapper around each PostCard in the slider */
+.community-trending-slide {
+  flex: 0 0 320px;           /* base width of a slide */
+  max-width: 360px;
+  scroll-snap-align: start;
+}
+
+/* Make the shared PostCard component fit nicely in the slider */
+.community-trending-slide .post-card {
+  width: 100%;
+  margin: 0;                 /* remove list spacing */
+}
+
+/* ===================================
+   POSTS LIST
+   =================================== */
+
+.community-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.community-post-wrapper {
+  position: relative;
+}
+
+/* ===================================
+   FLOATING ACTION BUTTON
+   =================================== */
+
+.community-fab {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background-color: #5b1f98;
+  color: #ffffff;
+  font-size: 30px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(91, 31, 152, 0.35);
+  z-index: 40;
+}
+
+.community-fab:hover {
+  background-color: #4a1980;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 1024px) {
+  .community-content-area {
+    padding: 24px;
+  }
+
+  .community-trending-slide {
+    flex: 0 0 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-content-area {
+    padding: 20px 16px;
+  }
+
+  .community-header-title {
+    font-size: 22px;
+  }
+
+  .community-tab-button {
+    margin-right: 16px;
+  }
+
+  .community-trending-slide {
+    flex: 0 0 260px;
+  }
+
+  .community-fab {
+    right: 20px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-content-area {
+    padding: 16px 12px;
+  }
+
+  .community-header-title {
+    font-size: 20px;
+  }
+
+  .community-section-title {
+    font-size: 16px;
+  }
+
+  .community-trending-slide {
+    flex: 0 0 230px;
+  }
+}

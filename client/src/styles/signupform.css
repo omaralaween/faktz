@@ -1,0 +1,114 @@
+/* Sign Up Tab Content */
+.auth-signup-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Form Fields - Reusing from auth.css */
+/* .auth-form-field is already defined in auth.css */
+/* .auth-form-label is already defined in auth.css */
+/* .auth-form-input is already defined in auth.css */
+
+/* Terms and Conditions */
+.auth-terms-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.auth-terms-checkbox {
+  margin-top: 4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  color: #5b1f98;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.auth-terms-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(91, 31, 152, 0.1);
+}
+
+.auth-terms-label {
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+}
+
+.auth-terms-link {
+  color: #5b1f98;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.auth-terms-link:hover {
+  color: #34dfa3;
+}
+
+/* Submit Button - Same as login */
+/* .auth-submit-button is already defined in auth.css */
+
+/* Divider - Same as login */
+/* .auth-divider-container, .auth-divider-line-wrapper, etc. are already defined in auth.css */
+
+/* Google Button - Same as login */
+/* .auth-google-button-wrapper, .auth-google-button, .auth-google-icon are already defined in auth.css */
+
+/* Login Prompt */
+.auth-login-prompt {
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #666666;
+  margin-top: 24px;
+}
+
+.auth-login-link {
+  color: #5b1f98;
+  transition: color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.auth-login-link:hover {
+  color: #34dfa3;
+}
+
+.auth-signup-content {
+  animation: fadeInContent 0.3s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .auth-signup-form {
+    gap: 14px;
+  }
+
+  .auth-terms-label {
+    font-size: 13px;
+  }
+
+  .auth-terms-checkbox {
+    height: 14px;
+    width: 14px;
+  }
+}

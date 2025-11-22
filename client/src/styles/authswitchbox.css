@@ -1,0 +1,131 @@
+/* ========================================
+   AUTH TAB SWITCH BOX STYLES
+   ======================================== */
+
+/* Tabs Container */
+.auth-tabs {
+  width: 100%;
+}
+
+/* Tab List - The switch box container */
+.auth-tabs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  margin-bottom: 24px;
+  background-color: #f3f4f6;
+  padding: 4px;
+  border-radius: 8px;
+  gap: 0;
+  position: relative;
+}
+
+/* Individual Tab Trigger */
+.auth-tab-trigger {
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #6b7280;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+/* Hover state for inactive tabs */
+.auth-tab-trigger:not([data-state="active"]):hover {
+  color: #4b5563;
+}
+
+/* Active tab state */
+.auth-tab-trigger[data-state="active"] {
+  background-color: white;
+  color: #5b1f98;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 
+              0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+/* Sliding animation for active tab */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.auth-tab-trigger[data-state="active"] {
+  animation: slideIn 0.2s ease-out;
+}
+
+/* Smooth background transition */
+.auth-tab-trigger {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus state for accessibility */
+.auth-tab-trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(91, 31, 152, 0.2);
+}
+
+/* Active tab with enhanced animation */
+.auth-tab-trigger[data-state="active"] {
+  animation: tabSlide 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes tabSlide {
+  0% {
+    opacity: 0.8;
+    transform: translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade animation for tab content */
+.auth-tab-content {
+  animation: fadeInContent 0.3s ease-out;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .auth-tabs-list {
+    margin-bottom: 20px;
+  }
+
+  .auth-tab-trigger {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Enhanced transition for smoother switching */
+.auth-tab-trigger {
+  will-change: background-color, color, box-shadow;
+}
+
+/* Prevent layout shift during animation */
+.auth-tabs-list {
+  isolation: isolate;
+}

@@ -1,0 +1,95 @@
+.post-options {
+  position: relative;
+}
+
+.post-options-menu {
+  width: 180px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #f3f4f6;
+  z-index: 50;
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.post-options-menu-item {
+  display: flex;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+}
+
+.post-options-menu-item:hover {
+  background-color: #f3e9fb;
+  color: #5b1f98;
+}
+
+.post-options-menu-item-delete:hover {
+  background-color: #fef2f2;
+  color: #dc2626;
+}
+
+.post-options-menu-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.post-options-menu-separator {
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 4px 0;
+}
+
+/* Trigger (3 dots) */
+.post-options-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b6b6b;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  padding: 8px;
+  border-radius: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.post-options-trigger:hover {
+  color: #5b1f98;
+  background-color: #f3e9fb;
+}
+
+.post-options-trigger-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Focus & active states */
+.post-options-menu-item:focus {
+  outline: 2px solid #5b1f98;
+  outline-offset: 2px;
+}
+
+.post-options-trigger:focus {
+  outline: 2px solid #5b1f98;
+  outline-offset: 2px;
+}
+
+.post-options-trigger:active {
+  transform: scale(0.95);
+}

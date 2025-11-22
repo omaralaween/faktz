@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import AuthPage from "./pages/AuthPage";
+import RoleSelectionPage from "./pages/RoleSelectionPage.jsx";
+import ProfileCreationPage from "./pages/ProfileCreationPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import AnalyzePage from "./pages/AnalyzePage";
+import CommunityPage from "./pages/CommunityPage.jsx";
+import ProfilePage from "./pages/ProfilePage.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/role" element={<RoleSelectionPage />} />
+        <Route path="/profile/create" element={<ProfileCreationPage />} />
+
+        {/* Main app sections */}
+        <Route path="/app" element={<HomePage />} />
+        <Route path="/analyze" element={<AnalyzePage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
